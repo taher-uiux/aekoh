@@ -1,11 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="">
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -13,77 +12,125 @@
   <meta property="og:image" content="">
   <meta property="og:image:alt" content="">
   <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-  <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="top-section">
-      <div class="container center">
-        <img src="./svg/logo-a-esufally.svg" alt="Site Logo" class="header-logo">
-      </div>
+  <header id="header" class="header-sticky header-transparent">
+    <div class="container-fluid navbar">
+      <a href="#" class="header-logo"></a>
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-nav-item"><a href="#" class="header-nav-link">About Us</a></li>
+          <li class="header-nav-item"><a href="#" class="header-nav-link">Products</a></li>
+          <li class="header-nav-item"><a href="#" class="header-nav-link">Clients</a></li>
+          <li class="header-nav-item"><a href="#" class="header-nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn red btn-header">Enquiry</a>
     </div>
   </header>
-  <section class="hero-banner">
-    <div class="container navbar">
-      <a href="#" class="header-logo">
-        <img src="./svg/logo-aekoh.svg" alt="Site Logo" class="header-logo">
-        <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item"><a href="#" class="header-nav-link">About Us</a></li>
-            <li class="header-nav-item"><a href="#" class="header-nav-link">Products</a></li>
-            <li class="header-nav-item"><a href="#" class="header-nav-link">Clients</a></li>
-            <li class="header-nav-item"><a href="#" class="header-nav-link">Contact Us</a></li>
-          </ul>
-        </nav>
-        <a href="#" class="btn btn-header">Enquiry</a>
-    </div>
-    <div class="container hero-section">
-      <div class="hero-content">
-        <h1 class="hero-title">Trusted Hardware Solutions
-          for India’s Landmark Projects
-          Since 1925</h1>
-        <p class="p-lg">For a century, AEKOH has empowered premium builders
-          with architectural hardware that delivers reliability,
-          elegance, and peace of mind—at every scale.</p>
-        <div class="hero-btn-group">
-          <a href="#" class="btn large red">Explore Solutions<ion-icon name="arrow-forward-outline"></ion-icon></a>
-          <a href="#" class="btn large blue">Partner With Us<ion-icon name="arrow-forward-outline"></ion-icon></a>
+  <!-- Slider main container -->
+  <div class="hero-carousel">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="hero-bg" style="background-image:url(./img/img-hero-1-1080p.webp)">
         </div>
-
+        <!-- Each slide has parallax title -->
+        <div class="hero-content" data-aos="fade-up">
+          <h2 class="hero-title" data-swiper-parallax="-400">Trusted Hardware Solutions
+            for India’s Landmark Projects
+            Since 1925</h2>
+          <!-- Parallax subtitle -->
+          <p data-swiper-parallax="-800">For a century,
+            AEKOH has empowered premium builders
+            with architectural hardware that delivers reliability,
+            elegance, and peace of mind—at every scale.</p>
+          <div class="hero-btn-group animate__animated animate__fadeInUp animate__delay-2s"
+            data-swiper-parallax="-1200">
+            <a href="#" class="btn med red">Explore Solutions<ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <a href="#" class="btn med blue">Partner With Us<ion-icon name="arrow-forward-outline"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-bg" style="background-image:url(./img/img-hero-2-1080p.webp)">
+        </div>
+        <!-- Each slide has parallax title -->
+        <div class="hero-content" data-aos="fade-up">
+          <h2 class="hero-title" data-swiper-parallax="-400">Smarter Entryways for Modern Buildings</h2>
+          <!-- Parallax subtitle -->
+          <p data-swiper-parallax="-800">From automatic sliding doors to advanced digital locks, our intelligent systems
+            offer seamless access control and enhanced security for any space.</p>
+          <div class="hero-btn-group" data-swiper-parallax="-1200">
+            <a href="#" class="btn med red">View Smart Door Solutions<ion-icon
+                name="arrow-forward-outline"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="hero-bg" style="background-image:url(./img/img-hero-3-1080p.webp)">
+        </div>
+        <!-- Each slide has parallax title -->
+        <div class="hero-content" data-aos="fade-up">
+          <h2 class="hero-title" data-swiper-parallax="-400">Stylish Shower
+            Partitions That Last</h2>
+          <!-- Parallax subtitle -->
+          <p data-swiper-parallax="-800">Bring a clean,
+            modern look to your bathroom with our robust and elegant shower partitions — ideal for both residential and
+            commercial interiors.</p>
+          <div class="hero-btn-group" data-swiper-parallax="-1200">
+            <a href="#" class="btn med red">Browse Shower Partition Range <ion-icon
+                name="arrow-forward-outline"></ion-icon></a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination hero-pagination"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev hero-btn-prev"></div>
+    <div class="swiper-button-next hero-btn-next"></div>
+  </div>
   <!-- Product Categories -->
   <section class="product-categories grey">
-    <div class="container">
-      <div class="product-category-item">
-        <img src="./svg/icn-architectural-hardware.svg" alt="Category 1" class="product-category-image red">
-        <p class="p-lg">Architectual Hardware</p>
+    <div class="product-category-item" data-aos="fade-down">
+      <div>
+        <img src="./svg/icn-architectural-hardware.svg" alt="Architectural Hardware" class="product-category-image red">
+        <p class="p-sm">Architectual<br>Hardware</p>
       </div>
-      <div class="product-category-item">
-        <img src="./svg/icn-architectural-hardware.svg" alt="Category 1" class="product-category-image">
-        <p class="p-lg">Automatic Sliding Doors</p>
+    </div>
+    <div class="product-category-item" data-aos="fade-down" data-aos-delay="200">
+      <div><img src="./svg/icn-automatic-sliding-doors.svg" alt="Automatic Sliding Doors"
+          class="product-category-image">
+        <p class="p-sm">Automatic<br>Sliding Doors</p>
       </div>
-      <div class="product-category-item">
-        <img src="./svg/icn-architectural-hardware.svg" alt="Category 1" class="product-category-image">
-        <p class="p-lg">Shower Partition </p>
+    </div>
+    <div class="product-category-item" data-aos="fade-down" data-aos-delay="400">
+      <div><img src="./svg/icn-bathroom-shower-partition.svg" alt="Shower Partition" class="product-category-image">
+        <p class="p-sm">Shower<br>Partition</p>
       </div>
-      <div class="product-category-item">
-        <img src="./svg/icn-architectural-hardware.svg" alt="Category 1" class="product-category-image">
-        <p class="p-lg">Digital Locks</p>
+    </div>
+    <div class="product-category-item" data-aos="fade-down" data-aos-delay="600">
+      <div><img src="./svg/icn-digital-locks.svg" alt="Digital Locks" class="product-category-image">
+        <p class="p-sm">Digital<br>Locks</p>
       </div>
-      <div class="product-category-item">
-        <img src="./svg/icn-architectural-hardware.svg" alt="Category 1" class="product-category-image">
-        <p class="p-lg">Fire Door Accessories</p>
+    </div>
+    <div class="product-category-item" data-aos="fade-down" data-aos-delay="800">
+      <div><img src="./svg/icn-fire-door-accessories.svg" alt="Fire Door Accessories" class="product-category-image">
+        <p class="p-sm">Fire Door<br>Accessories</p>
       </div>
-      <div class="product-category-item">
-        <img src="./svg/icn-architectural-hardware.svg" alt="Category 1" class="product-category-image">
-        <p class="p-lg">Fire Exit Door</p>
+    </div>
+    <div class="product-category-item" data-aos="fade-down" data-aos-delay="1000">
+      <div><img src="./svg/icn-fire-exit-door.svg" alt="Fire Exit Door" class="product-category-image">
+        <p class="p-sm">Fire Exit<br>Door</p>
       </div>
     </div>
   </section>
@@ -91,28 +138,36 @@
   <section class="domain">
     <div class="container">
       <div class="domain-content">
-        <h1 class="section-header">Trusted Across</h1>
+        <h1 data-aos="fade-up" class="section-header">Trusted Across</h1>
         <div class="domain-carousel">
-          <div class="domain-item">
-            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Residential">
-            <p class="p-lg">Residential</p>
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div data-aos="fade-up" data-aos-delay="200" class="swiper-slide domain-item">
+              <img src="./img/img-residential-420p.webp" alt="Residential">
+              <p class="p-lg">Residential</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" class="swiper-slide domain-item">
+              <img src="./img/img-hospitality-420p.webp" alt="Hospitality">
+              <p class="p-lg">Hospitality</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" class="swiper-slide domain-item">
+              <img src="./img/img-healthcare-420p.webp" alt="Healthcare">
+              <p class="p-lg">Healthcare</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="800" class="swiper-slide domain-item">
+              <img src="./img/img-commercial-420p.webp" alt="Commercial">
+              <p class="p-lg">Commercial</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="1000" class="swiper-slide domain-item">
+              <img src="./img/img-commercial-420p.webp" alt="Commercial">
+              <p class="p-lg">Commercial</p>
+            </div>
           </div>
-          <div class="domain-item">
-            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Hospitality">
-            <p class="p-lg">Hospitality</p>
-          </div>
-          <div class="domain-item">
-            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Healthcare">
-            <p class="p-lg">Healthcare</p>
-          </div>
-          <div class="domain-item">
-            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Commercial">
-            <p class="p-lg">Commercial</p>
-          </div>
-          <div class="domain-item">
-            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Commercial">
-            <p class="p-lg">Commercial</p>
-          </div>
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev domain-btn-prev"></div> -->
+          <!-- <div class="swiper-button-next domain-btn-next"></div> -->
+          <!-- If we need scrollbar -->
         </div>
       </div>
     </div>
@@ -121,9 +176,9 @@
   <section class="purpose">
     <div class="container">
       <div class="left">
-        <img src="./img/img-purpose.webp" alt="Our Purpose">
+        <img src="./img/img-purpose-772p.webp" alt="Our Purpose">
       </div>
-      <div class="right purpose-content">
+      <div class="right purpose-content" data-aos="fade-left">
         <h1 class="section-header">Our Purpose</h1>
         <p class="p-xl">A Legacy That Endures</p>
         <div class="content">
@@ -141,10 +196,10 @@
   <!-- Customer Services -->
   <section class="customer-services grey">
     <div class="container">
-      <div class="left">
+      <div class="left" data-aos="fade-right">
         <h1 class="section-header">Customer Services</h1>
       </div>
-      <div class="right">
+      <div class="right" data-aos="fade-left">
         <div class="content">
           <p class="p-lg">We have one of the industry's most extensive service networks,
             staffed by fully trained technicians who can handle a wide variety of
@@ -155,7 +210,7 @@
   </section>
   <!-- Products -->
   <section class="products">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
       <div class="left content">
         <h1 class="section-header">Our Products</h1>
         <p class="p-xl">Crafted to Last. Designed to Inspire</p>
@@ -166,8 +221,8 @@
     </div>
     <div class="container">
       <div class="product-grid">
-        <div class="product-item">
-          <img src="./img/img-product.webp" alt="Digital Locks">
+        <div class="product-item" data-aos="zoom-in-up">
+          <img src="./img/img-digital-locks-480p.webp" alt="Digital Locks">
           <div class="product-content blue">
             <div>
               <p class="p-xl">Digital Locks</p>
@@ -176,8 +231,8 @@
             <a href="#" class="btn small outline">Explore More</a>
           </div>
         </div>
-        <div class="product-item">
-          <img src="./img/img-product.webp" alt="Mechanical Locks">
+        <div class="product-item" data-aos="zoom-in-up" data-aos-delay="200">
+          <img src="./img/img-mechanical-locks-480p.webp" alt="Mechanical Locks">
           <div class="product-content red">
             <div>
               <p class="p-xl">Mechanical Locks</p>
@@ -186,8 +241,8 @@
             <a href="#" class="btn small outline">Explore More</a>
           </div>
         </div>
-        <div class="product-item">
-          <img src="./img/img-product.webp" alt="Glass Partitions">
+        <div class="product-item" data-aos="zoom-in-up" data-aos-delay="400">
+          <img src="./img/img-glass-partition-480p.webp" alt="Glass Partitions">
           <div class="product-content blue">
             <div>
               <p class="p-xl">Glass Partitions</p>
@@ -196,8 +251,8 @@
             <a href="#" class="btn small outline">Explore More</a>
           </div>
         </div>
-        <div class="product-item">
-          <img src="./img/img-product.webp" alt="Fire Doors & Accessories">
+        <div class="product-item" data-aos="zoom-in-up">
+          <img src="./img/img-fire-doors-480p.webp" alt="Fire Doors & Accessories">
           <div class="product-content blue">
             <div>
               <p class="p-xl">Fire Doors & Accessories</p>
@@ -206,8 +261,8 @@
             <a href="#" class="btn small outline">Explore More</a>
           </div>
         </div>
-        <div class="product-item">
-          <img src="./img/img-product.webp" alt="Automatic Doors">
+        <div class="product-item" data-aos="zoom-in-up" data-aos-delay="200">
+          <img src="./img/img-automatic-doors-480p.webp" alt="Automatic Doors">
           <div class="product-content red">
             <div>
               <p class="p-xl">Automatic Doors</p>
@@ -216,8 +271,8 @@
             <a href="#" class="btn small outline">Explore More</a>
           </div>
         </div>
-        <div class="product-item">
-          <img src="./img/img-product.webp" alt="Digital Locks">
+        <div class="product-item" data-aos="zoom-in-up" data-aos-delay="400">
+          <img src="./img/img-digital-locks-480p.webp" alt="Digital Locks">
           <div class="product-content blue">
             <div>
               <p class="p-xl">Digital Locks</p>
@@ -231,7 +286,7 @@
   </section>
   <!-- Industry Projects -->
   <section class="industry-projects grey">
-    <div class="container">
+    <div class="container" data-aos="fade-up">
       <div class="left">
         <h1 class="section-header">Industry Projects</h1>
       </div>
@@ -242,34 +297,34 @@
     </div>
     <div class="container">
       <div class="project-stats-grid">
-        <div class="project-stats-item">
-          <img src="./svg/icn-projects.svg" alt="Projects Icon" class="stat-icon">
-          <p class="p-xl">62000+</p>
+        <div class="project-stats-item" data-aos="zoom-in-up">
+          <img src="./svg/icn-hinges.svg" alt="Projects Icon" class="stat-icon">
+          <p class="p-xl"><span class="counter" data-countto="62000" data-duration="2000">62000</span><span>+</span></p>
           <p class="p-xl">Hinges</p>
         </div>
-        <div class="project-stats-item">
-          <img src="./svg/icn-projects.svg" alt="Projects Icon" class="stat-icon">
-          <p class="p-xl">15000+</p>
+        <div class="project-stats-item" data-aos="zoom-in-up" data-aos-delay="200">
+          <img src="./svg/icn-digital-locks.svg" alt="Projects Icon" class="stat-icon">
+          <p class="p-xl"><span class="counter" data-countto="15000" data-duration="2000">62000</span><span>+</span></p>
           <p class="p-xl">Digital Locks</p>
         </div>
-        <div class="project-stats-item">
-          <img src="./svg/icn-projects.svg" alt="Projects Icon" class="stat-icon">
-          <p class="p-xl">7800+</p>
+        <div class="project-stats-item" data-aos="zoom-in-up" data-aos-delay="400">
+          <img src="./svg/icn-fire-door-accessories.svg" alt="Projects Icon" class="stat-icon">
+          <p class="p-xl"><span class="counter" data-countto="7800" data-duration="2000">7800</span><span>+</span></p>
           <p class="p-xl">Panic Bar</p>
         </div>
-        <div class="project-stats-item">
-          <img src="./svg/icn-projects.svg" alt="Projects Icon" class="stat-icon">
+        <div class="project-stats-item" data-aos="zoom-in-up">
+          <img src="./svg/icn-sales.svg" alt="Projects Icon" class="stat-icon">
           <p class="p-xl">24-25</p>
           <p class="p-xl">Sales</p>
         </div>
-        <div class="project-stats-item">
-          <img src="./svg/icn-projects.svg" alt="Projects Icon" class="stat-icon">
-          <p class="p-xl">1200+</p>
+        <div class="project-stats-item" data-aos="zoom-in-up" data-aos-delay="200">
+          <img src="./svg/icn-door-closer.svg" alt="Projects Icon" class="stat-icon">
+          <p class="p-xl"><span class="counter" data-countto="1200" data-duration="2000">1200</span><span>+</span></p>
           <p class="p-xl">Door Closer</p>
         </div>
-        <div class="project-stats-item">
-          <img src="./svg/icn-projects.svg" alt="Projects Icon" class="stat-icon">
-          <p class="p-xl">3000+</p>
+        <div class="project-stats-item" data-aos="zoom-in-up" data-aos-delay="400">
+          <img src="./svg/icn-locks.svg" alt="Projects Icon" class="stat-icon">
+          <p class="p-xl"><span class="counter" data-countto="3000" data-duration="2000">3000</span><span>+</span></p>
           <p class="p-xl">Locks</p>
         </div>
       </div>
@@ -278,9 +333,9 @@
   <!--Testimonials-->
   <section class="testimonials">
     <div class="container">
-      <h1 class="section-header">Testimonials</h1>
+      <h1 class="section-header" data-aos="fade-up">Testimonials</h1>
       <div class="testimonial-grid">
-        <div class="testimonial-item odd">
+        <div class="testimonial-item odd" data-aos="fade-up">
           <div class="quote"><img src="./svg/icn-quote.svg" alt="Quote Icon"></div>
           <p>Lorem ipsum dolor sit
             amet, consectetuer
@@ -288,7 +343,7 @@
             nonummy nibh euismod</p>
           <h5>Suresh</h5>
         </div>
-        <div class="testimonial-item even">
+        <div class="testimonial-item even" data-aos="fade-up" data-aos-delay="200">
           <div class="quote"><img src="./svg/icn-quote.svg" alt="Quote Icon"></div>
           <p>Lorem ipsum dolor sit
             amet, consectetuer
@@ -296,7 +351,7 @@
             nonummy nibh euismod</p>
           <h5>Suresh</h5>
         </div>
-        <div class="testimonial-item odd">
+        <div class="testimonial-item odd" data-aos="fade-up" data-aos-delay="400">
           <div class="quote"><img src="./svg/icn-quote.svg" alt="Quote Icon"></div>
           <p>Lorem ipsum dolor sit
             amet, consectetuer
@@ -310,31 +365,38 @@
   <!--Associations-->
   <section class="associations grey">
     <div class="container">
-      <h1 class="section-header">Our associations</h1>
+      <h1 class="section-header" data-aos="fade-up">Our associations</h1>
       <div class="association-grid">
-        <div class="association-item">
-          <img src="./svg/icn-association1.svg" alt="Association 1">
+        <div class="association-item" data-aos="fade-up">
+          <img src="./img/img-dorset-240p.webp" alt="Association 1">
           <p>Lorem ipsum dolor
             consectetuer
             adipiscing elit, sed
             diam lobortis nisl ut</p>
         </div>
-        <div class="association-item">
-          <img src="./svg/icn-association1.svg" alt="Association 1">
+        <div class="association-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="./img/img-yale-240p.webp" alt="Association 1">
           <p>Lorem ipsum dolor
             consectetuer
             adipiscing elit, sed
             diam lobortis nisl ut</p>
         </div>
-        <div class="association-item">
-          <img src="./svg/icn-association1.svg" alt="Association 1">
+        <div class="association-item" data-aos="fade-up" data-aos-delay="400">
+          <img src="./img/img-hafele-240p.webp" alt="Association 1">
           <p>Lorem ipsum dolor
             consectetuer
             adipiscing elit, sed
             diam lobortis nisl ut</p>
         </div>
-        <div class="association-item">
-          <img src="./svg/icn-association1.svg" alt="Association 1">
+        <div class="association-item" data-aos="fade-up" data-aos-delay="600">
+          <img src="./img/img-safex-240p.webp" alt="Association 1">
+          <p>Lorem ipsum dolor
+            consectetuer
+            adipiscing elit, sed
+            diam lobortis nisl ut</p>
+        </div>
+        <div class="association-item" data-aos="fade-up" data-aos-delay="600">
+          <img src="./img/img-hettich-240p.webp" alt="Association 1">
           <p>Lorem ipsum dolor
             consectetuer
             adipiscing elit, sed
@@ -391,9 +453,92 @@
         <p class="p-sm">&copy; 2025 AEKOH. All rights reserved.</p>
       </div>
   </footer>
-  <script src="js/app.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script>
+    const heroCarousel = new Swiper('.hero-carousel', {
+      direction: 'horizontal',
+      loop: true,
+      parallax: true,
+      speed: 2000,
+      autoplay: {
+        delay: 5000, // Auto-advance every 5 seconds
+        disableOnInteraction: false, // Continue autoplay after user interaction
+        pauseOnMouseEnter: true, // Pause on hover
+      },
+      keyboard: {
+        enabled: true, // Allow keyboard navigation (arrow keys)
+      },
+      pagination: {
+        el: '.hero-pagination',
+        clickable: true, // Make dots clickable
+        dynamicBullets: true, // Show fewer bullets when many slides
+      },
+      navigation: {
+        nextEl: '.hero-btn-next',
+        prevEl: '.hero-btn-prev',
+      },
+      // Responsive adjustments
+      breakpoints: {
+        768: {
+          speed: 1500, // Faster on tablet/mobile for quicker feel
+        },
+      },
+      // Ensure AOS and parallax play well together
+      on: {
+        slideChange: function () {
+          // Refresh AOS if using it
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        },
+      },
+    });
+    const domainCarousel = new Swiper('.domain-carousel', {
+      direction: 'horizontal',
+      slidesPerView: 4,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.domain-btn-next',
+        prevEl: '.domain-btn-prev',
+      },
+      // Responsive: Adjust slides shown based on screen size
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+      // Trigger AOS on slide change for animations
+      on: {
+        slideChange: function () {
+          // Refresh AOS for domain items
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        },
+      },
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+  <script>AOS.init({
+      duration: 1200,
+    })
+  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

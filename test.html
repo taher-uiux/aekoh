@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <style>
+        .domain-carousel {
+            width: 100vw;
+            height: auto;
+        }
+
+        .domain-carousel.swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .domain-carousel .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .domain-carousel .swiper-button-prev,
+        .domain-carousel .swiper-button-next {
+            background-color: #191975;
+            padding: 0.5rem;
+            color: #fff;
+        }
+
+        .domain-carousel .swiper-button-disabled {
+            opacity: 0;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="domain">
+        <div class="container">
+            <div class="domain-content">
+                <h1 data-aos="fade-up" class="section-header">Trusted Across</h1>
+                <div class="domain-carousel">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div data-aos="fade-up" data-aos-delay="200" class="swiper-slide domain-item">
+                            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Residential">
+                            <p class="p-lg">Residential</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="200" class="swiper-slide domain-item">
+                            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Hospitality">
+                            <p class="p-lg">Hospitality</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="200" class="swiper-slide domain-item">
+                            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Healthcare">
+                            <p class="p-lg">Healthcare</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="200" class="swiper-slide domain-item">
+                            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Commercial">
+                            <p class="p-lg">Commercial</p>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="200" class="swiper-slide domain-item">
+                            <div class="overlay"></div><img src="./img/img-residential.webp" alt="Commercial">
+                            <p class="p-lg">Commercial</p>
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Slider main container -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>const swiper = new Swiper('.domain-carousel', {
+            // Optional parameters
+            direction: 'horizontal',
+            slidesPerView: 4,
+            spaceBetween: 30,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+        });</script>
+</body>
+
+</html>
