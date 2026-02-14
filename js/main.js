@@ -1,3 +1,8 @@
+//Mobile Hamburger for header
+document.querySelector(".menu-toggle").addEventListener("click", function() {
+    document.getElementById("header").classList.toggle("header-open");
+});
+
 // JavaScript for product filtering and sorting
 document.addEventListener('DOMContentLoaded', function () {
     const categoryItems = document.querySelectorAll('.category-list > li');
