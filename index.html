@@ -21,7 +21,7 @@
 
 <body>
   <!-- Header -->
-  <header id="header" class="header-sticky header-transparent">
+  <header id="header" class="header-transparent header-sticky">
     <div class="container-fluid navbar">
       <a href="#" class="header-logo"></a>
       <nav class="header-nav">
@@ -33,6 +33,11 @@
         </ul>
       </nav>
       <a href="#" class="btn red btn-header">Enquiry</a>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
   <!-- Slider main container -->
@@ -160,8 +165,8 @@
               <p class="p-lg">Commercial</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="1000" class="swiper-slide domain-item">
-              <img src="./img/img-commercial-420p.webp" alt="Commercial">
-              <p class="p-lg">Commercial</p>
+              <img src="./img/img-industrial-420p.webp" alt="Industrial">
+              <p class="p-lg">Industrial</p>
             </div>
           </div>
           <!-- If we need navigation buttons -->
@@ -272,11 +277,11 @@
           </div>
         </div>
         <div class="product-item" data-aos="zoom-in-up" data-aos-delay="400">
-          <img src="./img/img-digital-locks-480p.webp" alt="Digital Locks">
+          <img src="./img/img-fire-exit-doors-480p.webp" alt="Fire Exit Doors">
           <div class="product-content blue">
             <div>
-              <p class="p-xl">Digital Locks</p>
-              <p class="p-sm">Lorem ipsum dolor sit amet</p>
+              <p class="p-xl">Fire Exit Doors</p>
+              <p class="p-sm">Safety made simple</p>
             </div>
             <a href="#" class="btn small outline">Explore More</a>
           </div>
@@ -368,39 +373,16 @@
       <h1 class="section-header" data-aos="fade-up">Our associations</h1>
       <div class="association-grid">
         <div class="association-item" data-aos="fade-up">
-          <img src="./img/img-dorset-240p.webp" alt="Association 1">
-          <p>Lorem ipsum dolor
-            consectetuer
-            adipiscing elit, sed
-            diam lobortis nisl ut</p>
+          <img src="./img/img-01-dorset-240p1x.webp" alt="Association 1">
         </div>
         <div class="association-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="./img/img-yale-240p.webp" alt="Association 1">
-          <p>Lorem ipsum dolor
-            consectetuer
-            adipiscing elit, sed
-            diam lobortis nisl ut</p>
+          <img src="./img/img-02-geze-240p1x.webp" alt="Association 1">
         </div>
         <div class="association-item" data-aos="fade-up" data-aos-delay="400">
-          <img src="./img/img-hafele-240p.webp" alt="Association 1">
-          <p>Lorem ipsum dolor
-            consectetuer
-            adipiscing elit, sed
-            diam lobortis nisl ut</p>
+          <img src="./img/img-03-dormakaba-240p1x.webp" alt="Association 1">
         </div>
         <div class="association-item" data-aos="fade-up" data-aos-delay="600">
-          <img src="./img/img-safex-240p.webp" alt="Association 1">
-          <p>Lorem ipsum dolor
-            consectetuer
-            adipiscing elit, sed
-            diam lobortis nisl ut</p>
-        </div>
-        <div class="association-item" data-aos="fade-up" data-aos-delay="600">
-          <img src="./img/img-hettich-240p.webp" alt="Association 1">
-          <p>Lorem ipsum dolor
-            consectetuer
-            adipiscing elit, sed
-            diam lobortis nisl ut</p>
+          <img src="./img/img-04-yale-240p1x.webp" alt="Association 1">
         </div>
       </div>
     </div>
@@ -481,8 +463,8 @@
       },
       // Responsive adjustments
       breakpoints: {
-        768: {
-          speed: 1500, // Faster on tablet/mobile for quicker feel
+        320: {
+          autoplay: false,
         },
       },
       // Ensure AOS and parallax play well together
@@ -506,7 +488,7 @@
       // Responsive: Adjust slides shown based on screen size
       breakpoints: {
         320: {
-          slidesPerView: 1,
+          slidesPerView: 1.5,
           spaceBetween: 20,
         },
         768: {
