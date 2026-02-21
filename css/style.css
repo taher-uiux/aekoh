@@ -190,6 +190,25 @@ a {
   cursor: pointer;
 }
 
+input, textarea, select{
+  font-family: 'Roboto', sans-serif;
+  padding: 0.75rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+label{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #191975;
+}
+
 .p-xl {
   font-size: 1.5rem;
 }
@@ -208,6 +227,7 @@ a {
 
 section {
   padding: 4rem 0;
+  width: 100%;
 }
 
 section.grey {
@@ -269,6 +289,17 @@ section.grey {
   gap: 1.5rem;
 }
 
+.grid-col-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+
+.gap-05{
+  gap: 0.5rem;
+}
+
 .gap-1{
   gap: 1rem;
 }
@@ -305,6 +336,9 @@ section.grey {
   gap: 0.3rem;
 }
 
+.flex-row{
+  flex-direction: row;
+}
 
 .btn {
   display: flex;
@@ -315,6 +349,7 @@ section.grey {
   font-size: 1rem;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  cursor: pointer
 }
 
 .btn-header {
@@ -856,7 +891,6 @@ footer .footer-top .logo-column {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
 }
 
 .breadcrumbs .breadcrumb-link {
@@ -883,6 +917,10 @@ footer .footer-top .logo-column {
 
 .page-title .content {
   width: 50%;
+}
+
+.section-header{
+  margin-bottom: 2rem;
 }
 
 .products-section {
@@ -1018,6 +1056,65 @@ ion-icon {
   border-radius: 0.25rem;
   border-bottom-right-radius: 1.5rem;
 }
+
+.product-main-img{
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Overlay */
+.image-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 2000;
+}
+
+.image-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-img {
+    max-width: 90%;
+    max-height: 85%;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.image-overlay.active .overlay-img {
+    transform: scale(1);
+}
+
+.overlay-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Finishes */
+.finish-thumb {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.finish-thumb:hover {
+    transform: scale(1.05);
+}
+
+.finish-thumb.active {
+    outline: 2px solid #A1392C;
+}
+
 
 /* ------ Media Queries ------ */
 @media screen and (max-width: 600px) {

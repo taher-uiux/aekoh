@@ -27,7 +27,7 @@
       <nav class="header-nav">
         <ul class="header-nav-list">
           <li class="header-nav-item"><a href="#" class="header-nav-link">About Us</a></li>
-          <li class="header-nav-item"><a href="#" class="header-nav-link">Products</a></li>
+          <li class="header-nav-item"><a href="../../../../products/index.html" class="header-nav-link">Products</a></li>
           <li class="header-nav-item"><a href="#" class="header-nav-link">Clients</a></li>
           <li class="header-nav-item"><a href="#" class="header-nav-link">Contact Us</a></li>
         </ul>
@@ -153,10 +153,10 @@
       <!-- Product Grid -->
       <div class="right-content">
         <h4 class="mb-2">VOGUE+ DG 405 Push-Pull Digital Door Lock</h4>
-        <div class="grid-col-2">
+        <div class="grid-col-2 product-gallery">
           <!-- Push-Pull Digital Door Lock -->
-          <div class="img-container"><img src="../../../../img/img-vogue-dg-405-push-pull-digital-door-lock.webp" alt="VOGUE+ DG 405 Push-Pull Digital Door Lock"
-              loading="lazy"></div>
+          <div class="img-container"><img src="../../../../img/img-vogue-dg-405-push-pull-digital-door-lock.webp"
+              alt="VOGUE+ DG 405 Push-Pull Digital Door Lock" class="product-main-img" loading="lazy"></div>
           <div class="content gap-3">
             <div class="content gap-1">
               <p class="p-lg">Access Modes</p>
@@ -187,11 +187,15 @@
             <div class="content gap-1">
               <p class="p-xl">Available Finishes</h5>
               <div class="finishes-grid">
-                <img src="../../../../img/img-finish-graphite-matte.webp" alt="Graphine Matte" title="Graphine Matte">
-                <img src="../../../../img/img-finish-champagne-matte.webp" alt="Champagne Matte" title="Champagne Matte">
+                <img src="../../../../img/img-finish-graphite-matte.webp"
+                  data-full="../../../../img/img-vogue-dg-405-push-pull-digital-door-lock.webp" alt="Graphite Matte" class="finish-thumb">
+
+                <img src="../../../../img/img-finish-champagne-matte.webp"
+                  data-full="../../../../img/img-vogue-dg-405-push-pull-digital-door-lock-cm.webp" alt="Champagne Matte"
+                  class="finish-thumb">
               </div>
             </div>
-            <a href="" class="btn med red">Product Enquiry</a>
+            <a href="../../../../contact/enquiry/index.html" class="btn med red">Product Enquiry</a>
           </div>
         </div>
       </div>
@@ -245,9 +249,66 @@
         <p class="p-sm">&copy; 2025 AEKOH. All rights reserved.</p>
       </div>
   </footer>
+  <div class="image-overlay">
+    <span class="overlay-close">&times;</span>
+    <img class="overlay-img" src="" alt="">
+  </div>
   <script src="../js/main.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    // CHANGE MAIN IMAGE WHEN CLICKING FINISH
+    document.addEventListener("DOMContentLoaded", function () {
+
+      document.querySelectorAll(".finish-thumb").forEach(thumb => {
+
+        thumb.addEventListener("click", function () {
+
+          const gallery = this.closest(".product-gallery");
+          const mainImg = gallery.querySelector(".product-main-img");
+
+          const newSrc = this.dataset.full || this.src;
+
+          mainImg.src = newSrc;
+
+          // Active highlight
+          gallery.querySelectorAll(".finish-thumb")
+            .forEach(t => t.classList.remove("active"));
+
+          this.classList.add("active");
+
+        });
+
+      });
+
+    });
+    // IMAGE OVERLAY
+    const overlay = document.querySelector(".image-overlay");
+    const overlayImg = document.querySelector(".overlay-img");
+    const overlayClose = document.querySelector(".overlay-close");
+
+    document.querySelectorAll(".product-main-img").forEach(img => {
+
+      img.addEventListener("click", function () {
+        overlayImg.src = this.src;
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+
+    });
+
+    // Close overlay
+    overlayClose.addEventListener("click", closeOverlay);
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) closeOverlay();
+    });
+
+    function closeOverlay() {
+      overlay.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+  </script>
 </body>
 
 </html>
