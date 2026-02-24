@@ -1,6 +1,4 @@
-
-
-// JavaScript for product filtering and sorting
+    // JavaScript for product filtering and sorting
 /* document.addEventListener('DOMContentLoaded', function () {
     const categoryItems = document.querySelectorAll('.category-list > li');
     const productGrid = document.querySelector('.product-grid');
@@ -207,3 +205,54 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', checkCounters);
     checkCounters(); // Initial check in case already in viewport
 });
+
+// CHANGE MAIN IMAGE WHEN CLICKING FINISH
+    document.addEventListener("DOMContentLoaded", function () {
+
+      document.querySelectorAll(".finish-thumb").forEach(thumb => {
+
+        thumb.addEventListener("click", function () {
+
+          const gallery = this.closest(".product-gallery");
+          const mainImg = gallery.querySelector(".product-main-img");
+
+          const newSrc = this.dataset.full || this.src;
+
+          mainImg.src = newSrc;
+
+          // Active highlight
+          gallery.querySelectorAll(".finish-thumb")
+            .forEach(t => t.classList.remove("active"));
+
+          this.classList.add("active");
+
+        });
+
+      });
+
+    });
+    // IMAGE OVERLAY
+    const overlay = document.querySelector(".image-overlay");
+    const overlayImg = document.querySelector(".overlay-img");
+    const overlayClose = document.querySelector(".overlay-close");
+
+    document.querySelectorAll(".product-main-img").forEach(img => {
+
+      img.addEventListener("click", function () {
+        overlayImg.src = this.src;
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
+
+    });
+
+    // Close overlay
+    overlayClose.addEventListener("click", closeOverlay);
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) closeOverlay();
+    });
+
+    function closeOverlay() {
+      overlay.classList.remove("active");
+      document.body.style.overflow = "";
+    }
